@@ -10,38 +10,18 @@ import { HttpCoreService } from 'philomathcode/modules/http/http-core.service';
 export class HomePageComponent implements OnInit {
 
   constructor(private httpService:HttpCoreService) {
-    this.tableData.rows = [];
    }
-  public tableData = new TableData();
+
+  public angularAppDetails =
+  {
+    'version':"12.2.12"
+  }
+  
   
 
-  public githubUser = "philomath-code";
   ngOnInit(): void {
-    this.getGitHubRepos();
   }
 
-  outputChange(event:any)
-  {
-    this.githubUser = event.data;
-    this.githubUserInputGetData();
-  }
-
-  githubUserInputGetData()
-  {
-    if(this.githubUser.length > 4)
-    {
-      this.getGitHubRepos();
-    }
-  }
-
-  getGitHubRepos()
-  {
-    var url = "https://api.github.com/users/" + this.githubUser + "/repos"; 
-    this.httpService.getRequest(url).subscribe((result)=>{
-      this.tableData.rows = result;
-    },(error:any)=>{
-      this.tableData.rows = [];
-    });
-  }
+  
 
 }

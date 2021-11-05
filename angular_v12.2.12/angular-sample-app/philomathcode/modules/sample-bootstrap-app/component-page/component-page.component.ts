@@ -6,6 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./component-page.component.scss']
 })
 export class ComponentPageComponent implements OnInit {
+  public public_routes =
+  [
+    {"name":"Home","route":"/home"},
+    // {"name":"Table","route":"/table"},
+    {"name":"Components","route":"/components"},
+    {"name":"Input","route":"/components/input"},
+    {"name":"Select","route":"/components/select"},
+    {"name":"Table","route":"/components/table"},
+    // {"name":"Input","route":"/components/input"},
+
+
+  ];
+  
 
   constructor() { }
 

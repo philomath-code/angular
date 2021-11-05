@@ -7,13 +7,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  public websitename = "Philomathcode";
   public public_routes =
   [
     {"name":"Home","route":"/home"},
-    {"name":"Table","route":"/table"},
-    {"name":"Components","route":"/components"}
+    // {"name":"Table","route":"/table"},
+    {"name":"Components","route":"/components"},
+    {"name":"Input","route":"/components/input"},
+    {"name":"Select","route":"/components/select"},
+    {"name":"Table","route":"/components/table"},
+    // {"name":"Input","route":"/components/input"},
+
+
   ];
+
+  
 
   public showSideNav:any;
 

@@ -1,8 +1,8 @@
 <div>
-    <nav class="navbar navbar-dark bg-dark justify-content-center">
+    <nav class="navbar navbar-light bg-light text-dark justify-content-center">
         <!-- Navbar content -->
         <span style="color:white" (click)="openNav()" class="navbar-toggler-icon" style="padding:10px"></span>
-        <span class="navbar navbar-brand">Philomathcode</span>
+        <span class="navbar navbar-brand">{{websitename|uppercase}}</span>
 
 
       </nav>
@@ -41,7 +41,7 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #111;
+      /* background-color: #111; */
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
@@ -88,7 +88,7 @@
 
 
 <!--sidenav - daniel medina 10.1.2021-->
-<div id="mySidenav" class="sidenav" *ngIf="showSideNav">
+<div id="mySidenav" class="sidenav bg-dark" *ngIf="showSideNav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
   <div>
     <ul class="list-group">

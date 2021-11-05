@@ -7,6 +7,9 @@ import { HttpCoreModule } from '../http/http-core.module';
 import { TablePageComponent } from './table-page/table-page.component';
 import { ComponentPageComponent } from './component-page/component-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { GithubReposComponent } from './github-repos/github-repos.component';
+import { InputPageComponent } from './input-page/input-page.component';
+import { SelectPageComponent } from './select-page/select-page.component';
 
 
 
@@ -15,12 +18,15 @@ import { HomePageComponent } from './home-page/home-page.component';
     SampleBootstrapAppComponent,
     TablePageComponent,
     ComponentPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    GithubReposComponent,
+    InputPageComponent,
+    SelectPageComponent
   ],
   imports: [
     CommonModule,MainModule,BootstrapModule,HttpCoreModule
   ],exports:[SampleBootstrapAppComponent,TablePageComponent,
     ComponentPageComponent,
-    HomePageComponent]
+    HomePageComponent,GithubReposComponent]
 })
 export class SampleBootstrapAppModule { }

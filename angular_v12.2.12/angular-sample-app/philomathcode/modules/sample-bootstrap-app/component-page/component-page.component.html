@@ -1,16 +1,15 @@
 <div class="container">
     <!--Header-->
     <div class="d-flex justify-content-center">
-        <app-header [headerText]="'Components'"></app-header>
-    </div>
-    <div class="container justify-content-center " >
-        <div>
-            <app-input-test></app-input-test>
-        </div>
-        <br>
-        <div>
-            <app-select-test></app-select-test>
 
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let route of public_routes">
+                    {{route.name}}
+                </li>
+            </ul>
         </div>
+
     </div>
+   
 </div>

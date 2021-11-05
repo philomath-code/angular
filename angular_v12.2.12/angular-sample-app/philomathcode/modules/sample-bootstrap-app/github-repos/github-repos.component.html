@@ -1,0 +1,36 @@
+<!--github repos-->
+<div class="">
+    <div>
+        <app-header [headerText]="'GitHub'"></app-header>
+    </div>
+    <div *ngIf="tableData.rows.length > 0" class="d-flex justify-content-end">
+        <div class="card" style="width:40em">
+            <div class="card-body">
+             <div>
+                 <!-- <app-header [headerText]="'Github Repositories'"></app-header> -->
+                 <p>Check out the github repos of your choice!</p>
+             </div>
+             <div class="container" style="width:18em">
+                 <app-input [bootstrapFormControl]="true" [inputModel]="githubUser" (outputChange)="outputChange($event)" [placeholder]="'Enter GitHub User Name'"></app-input>
+             </div>
+             <div *ngFor="let github of tableData.rows" style="padding:10px;" class="container d-flex justify-content-center">
+                 <div  class="card" style="width:20em">
+                     <div class="card-header bg-default text-dark" style="padding:10px">
+                         {{github.full_name}}
+                     </div>
+                     <div class="card-body" style="padding:10px">
+                         <div>
+                             {{github.description}}
+                         </div>
+                     </div>
+     
+                     <div class="card-actions" style="padding:10px">
+                         <a target="_target" href="{{github.html_url}}" class="btn btn-warning">View</a>
+                     </div>
+         
+                 </div>
+             </div>
+            </div>
+        </div>
+     </div>
+</div>
