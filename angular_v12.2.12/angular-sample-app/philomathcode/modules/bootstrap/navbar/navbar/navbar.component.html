@@ -1,0 +1,107 @@
+<div>
+    <nav class="navbar navbar-dark bg-dark justify-content-center">
+        <!-- Navbar content -->
+        <span style="color:white" (click)="openNav()" class="navbar-toggler-icon" style="padding:10px"></span>
+        <span class="navbar navbar-brand">Philomathcode</span>
+
+
+      </nav>
+      
+      <!-- <nav class="navbar navbar-dark bg-dark" >
+        <span (click)="openNav()" class="navbar-toggler-icon" style="padding:10px"></span>
+      </nav> -->
+      
+</div>
+
+
+<!--sidenav javascript daniel medina - 10.1.2021-->
+<script>
+  //$("#menu.Dashboard").click(function () {
+  //    showModalById("divLoading", true);
+  //});
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+<!--sidenav style daniel medina - 10.1.2021-->
+
+<style>
+  /* body {
+      font-family: "Lato", sans-serif;
+  }*/
+
+  .sidenav {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      color:white;
+
+  }
+
+      .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+      }
+
+          .sidenav a:hover {
+              color: #f1f1f1;
+          }
+
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+
+  @media screen and (max-height: 450px) {
+      .sidenav {
+          padding-top: 15px;
+      }
+
+          .sidenav a {
+              font-size: 18px;
+          }
+  }
+  .list-group-item:hover
+  {
+    background-color:dodgerblue;
+    color:white;
+  }
+</style>
+
+
+<!--sidenav - daniel medina 10.1.2021-->
+<div id="mySidenav" class="sidenav" *ngIf="showSideNav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <div>
+    <ul class="list-group">
+      <li class="list-group-item" (click)="navigateToRoute(route.route)" *ngFor="let route of public_routes">
+        {{route.name}}
+
+      </li>
+      <!-- <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li> -->
+    </ul>
+  </div>
+  <!-- <a id="menu.Dashboard" href="@Url.Action("Dashboard","Home")">Dashboard</a> -->
+</div>

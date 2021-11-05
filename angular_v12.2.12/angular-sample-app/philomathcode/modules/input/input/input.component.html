@@ -1,0 +1,6 @@
+
+<div>
+    <label>{{placeholder}}</label>
+    
+    <input [ngClass]="{'form-control': bootstrapFormControl}"  (keyup)="inputChange($event)"  [ngModel]="inputModel" placeholder="{{placeholder}}">
+</div>

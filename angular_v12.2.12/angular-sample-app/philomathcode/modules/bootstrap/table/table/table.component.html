@@ -1,0 +1,40 @@
+<!--view-->
+<div>
+
+</div>
+
+<!--table-->
+<div>
+    <div class="container d-flex justify-content-end">
+        <div class="row">
+            <div class="col">
+                <p><b>Count</b> {{this.tableData.rows.length}}</p>
+    
+            </div>
+            <div class="col">
+                <app-select [bootstrapFormControl]="true" [options]="viewOptions" [optionDisplayParameter]="'name'" [optionValueParameter]="'value'" [selectModel]="defaultViewOption" (optionSelected)="viewSelected($event)" [placeholder]="'View'"></app-select>
+
+            </div>
+        </div>
+
+        <!-- <app-select-test></app-select-test> -->
+    </div>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <!--add list of columns-->
+            <tr >
+                <th *ngFor="let column of tableData.columns">{{column}}</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let row of tableData.rows">
+           <td *ngFor="let key of row.keys">{{row.rowData[key]}}</td> 
+        </tr>
+
+    </table>
+</div>
+
+<!--pagination-->
+<div>
+
+</div>

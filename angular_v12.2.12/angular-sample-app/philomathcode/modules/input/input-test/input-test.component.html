@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card ">
+        <div class="card-title" style="padding:20px">
+
+            <h4>Input</h4>
+            
+        </div>
+    
+        <div class="card-body" >
+            <div style="width:12em" class="container d-flex justify-content-center">
+                <app-input [bootstrapFormControl]="true" [inputModel]="" (outputChange)="outputChange($event)" [placeholder]="inputTestComponentClientText.inputDisplyText"></app-input>
+        
+            </div>
+            <br>
+
+            <!--Response Data-->
+            <div>
+                <h5>Response</h5>
+                <pre style="overflow:scroll"><p>{{inputComponentResponse|json}}</p></pre>
+            </div>
+        </div>
+    </div>
+</div>

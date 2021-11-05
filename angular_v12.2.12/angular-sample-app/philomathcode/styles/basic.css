@@ -1,0 +1,26 @@
+.basic-div-card
+{
+    width:18em;
+    padding:10px;
+    border:1px groove  gray
+}
+.basic-div-section
+{
+    /* width:18em; */
+    padding:10px;
+    border:1px groove  gray
+}
+
+.basic-div-body
+{
+    overflow-wrap: break-word;
+    padding:10px;
+}
+
+
+.cardWidth
+{
+    width:20em;
+}
+
+
