@@ -1,0 +1,7 @@
+<div class="container">
+    <div>
+        <button (click)="modalInputData.showModal = true" class="btn btn-primary">Modal</button>
+        <app-simple-modal [modalInput]="modalInputData" (simpleModalOutput)="simpleModalOutput($event)"></app-simple-modal>
+    </div>
+
+</div>

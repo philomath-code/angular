@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <app-header [headerText]="'Modal Component'"></app-header>
+            <app-simple-modal-test (sampleModalTestOutput)="sampleModalTestOutput($event)"></app-simple-modal-test>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-body">
+            <div>
+                <h4>Modal Output</h4>
+            </div>
+            <div class="container">
+
+               <pre> {{responseFromSampleModalTestOutput|json}}</pre>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

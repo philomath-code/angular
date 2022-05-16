@@ -1,0 +1,22 @@
+<div *ngIf="optionDisplayParameter">
+    <label>{{placeholder}}</label>
+    
+    <select [(ngModel)]="selectModel" [ngClass]="{'form-control': bootstrapFormControl}" (change)=optionSelectChange($event) *ngIf="optionDisplayParameter.length > 0">
+        <option  *ngFor="let option of options" value="{{option[optionValueParameter]}}">
+            {{option[optionDisplayParameter]}}
+        </option>
+
+    </select>
+</div>
+
+
+<div *ngIf="!optionDisplayParameter">
+    <label>{{placeholder}}</label>
+    
+    <select [(ngModel)]="selectModel" [ngClass]="{'form-control': bootstrapFormControl}">
+        <option *ngFor="let option of options" value="option">
+            {{option}}
+        </option>
+
+    </select>
+</div>

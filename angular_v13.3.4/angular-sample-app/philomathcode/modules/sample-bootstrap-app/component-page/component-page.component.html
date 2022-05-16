@@ -1,0 +1,29 @@
+<div class="container">
+    <!--Header-->
+    <div class="bg-warning text-white">
+        <app-header [headerText]="'Components'"></app-header>
+
+        <div class="card">
+           <div class="card-body">
+
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let route of public_routes">
+                    <a href="{{route.route}}">{{route.name}}</a>
+                </li>
+            </ul>
+<!-- 
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+              <option value="San Francisco">
+              <option value="New York">
+              <option value="Seattle">
+              <option value="Los Angeles">
+              <option value="Chicago">
+            </datalist> -->
+
+           </div>
+        </div>
+
+    </div>
+   
+</div>

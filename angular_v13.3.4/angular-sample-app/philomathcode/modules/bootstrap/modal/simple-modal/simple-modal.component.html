@@ -1,0 +1,18 @@
+<!-- Modal -->
+<div *ngIf="modalInput.showModal" class="modal" id="{{modalInput.modalId}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div *ngIf="this.modalInput.displayHeaderText && this.modalInput.displayHeaderText.length > 0" class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{this.modalInput.displayHeaderText}}</h5>
+          <button type="button" class="btn-close" (click)="buttonClickBtn('')" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {{this.modalInput.displayText}}
+        </div>
+        <div class="modal-footer">
+          <button (click)="buttonClickBtn('left')" type="button" class="btn btn-secondary" >{{this.modalInput.leftButtonText}}</button>
+          <button (click)="buttonClickBtn('right')" type="button" class="btn btn-primary">{{this.modalInput.rightButtonText}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
